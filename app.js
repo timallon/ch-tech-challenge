@@ -3,6 +3,9 @@ const express = require('express');
  
 // Express server handling requests and responses
 const app = express();
+
+// Make everything inside of public/ available
+app.use(express.static('public'));
  
 // testing basic route:
 app.get('/', (request, response, next) => response.send('<h1>Basic route working</h1>'));
